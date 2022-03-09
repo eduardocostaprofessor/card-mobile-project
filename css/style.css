@@ -1,0 +1,321 @@
+@font-face {
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+    font-family: "Roboto-Regular"; /*APELIDO*/
+}
+@font-face {
+    src: url(../fonts/Roboto/Roboto-Medium.ttf);
+    font-family: "Roboto-Medium";
+}
+@font-face {
+    src: url(../fonts/Roboto/Roboto-Bold.ttf);
+    font-family: "Roboto-Bold";
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto-Regular";
+    background-color: #D9DFE7;
+    font-size: 12px;
+}
+
+/* Generics Styles */
+.status--success {
+    color: #30D38F;
+}
+
+.status--waiting {
+    color: #FDAA8B;
+}
+
+.status--active {
+    color: #00A5DD !important;
+}
+
+.background-status--success {
+    background-color: #30D38F;
+}
+
+.background-status--waiting {
+    background-color: #FDAA8B;
+}
+
+.persona1 {
+    background-image: url(../images/pfk01.png);
+}
+
+.persona2 {
+    background-image: url(../images/pfk02.png);
+}
+
+.persona3 {
+    background-image: url(../images/pfk03.png);
+}
+
+.persona4 {
+    background-image: url(../images/pfk04.png);
+}
+
+.persona5 {
+    background-image: url(../images/pfk05.png);
+}
+
+.persona6 {
+    background-image: url(../images/pfk06.png);
+}
+
+.persona7 {
+    background-image: url(../images/pfk07.png);
+}
+
+
+/* mobile first */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 10px 5%;
+    height: 150px;
+    
+    color: white;
+    background-color: #00A5DD;
+    background-image: linear-gradient(120deg, #00A5DD,#46BEE6, #48BCE5, #6accef);
+     
+    
+}
+
+header h1 {
+    font-size: 1.2rem;
+}
+
+header i {
+    font-size: 1rem;
+}
+
+.search-box{
+    display: flex;
+    justify-content: space-between;
+    width: 50px;
+}
+
+/***************** MAIN  *****************/
+.page-content {
+    margin-bottom: 70px;
+}
+.card-box {
+    position: relative;
+    top: -30px;
+    left: 0;
+    
+    width: 90%;
+    /* max-width: 320px; */
+    min-width: 320px;
+    margin: 0 auto 20px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+}
+
+.card-title {
+    font-family: "Roboto-Medium";
+    font-size: .7rem;
+    margin-bottom: 10px;
+}
+.card {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: .5px solid #e5e4e4;
+}
+.card-perfil {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    background-color: purple;
+
+    /* background-image: url(../images/pfk03.png); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+}
+
+.card-counter {
+    position: absolute;
+    bottom: 0px;
+    right: -6px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 12px;
+    height: 12px;
+
+    font-size: .6rem;
+    color: #fff;
+    border-radius: 50%;
+}
+.card-info {
+    width: 60%;
+}
+
+.card-name {
+    margin-top: 5px;
+    font-size: .8rem;
+    
+}
+
+.card-status {
+    margin-top: 5px;
+    font-size: .6rem;
+}
+
+.card-price {
+    font-family: "Roboto-Bold";
+    font-size: .7rem;
+}
+
+/***************** FOOTER  *****************/
+/* Aplicando padrão BEM CSS - getbem.com*/
+
+.menubottom{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    max-height: 45px;
+    padding: 10%;
+    background-color: white;
+    border-radius: 28px 28px 0 0;
+}
+
+.menubottom__item {
+    color: grey;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+
+/* Tablets */
+@media screen and (min-width: 768px){
+    body {
+        font-size: 16px;
+    }
+    
+    /* HEADER */
+    .page-header {
+        /* padding: 10px 10%; */
+        height: 250px;
+    }
+
+    .page-title{
+        font-size: 1.8rem;
+    }
+
+    .search-box {
+        width: 70px;
+    }
+
+    .search-box i {
+        font-size: 1.5rem;
+    }
+    
+    
+    /* MAIN */
+    .page-content {
+        margin-bottom: 155px;
+    }
+    .card-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .card-title {
+        width: 100%;
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+    .card {
+        width: 48%;
+        padding: 8px;
+        margin-bottom: 20px;
+
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+    }
+    
+    .card-perfil {
+        width: 75px;
+        height: 75px;
+    }
+
+    .card-name{
+        margin-top: 0;
+        margin-left: 10px;
+        font-size: 1.2rem;
+    }
+    
+    .card-status{
+        font-size: 1rem;
+        margin-left: 10px;
+    }
+    
+    .card-price{
+        font-size: 1.2rem;
+    }
+
+    /* FOOTER */
+
+    .menubottom {
+        padding: 20px 10%;
+        min-height: 100px;
+        border-radius: 0;
+    }
+    .menubottom__item {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .menubottom {
+        left: auto;
+        top: 50%;
+        right: 10px;
+        
+        width: 40px;
+        padding: 10px;
+        min-height: 200px;
+        
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    
+        
+        background-color: transparent;
+        border-radius: 15px;
+        border: 1px solid #00A5DD;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+    }
+    .menubottom__item {
+        color : white;
+        transition: color 0.3s;
+    }
+    .menubottom__item:hover {
+        color: #008bba !important;
+    }
+}
