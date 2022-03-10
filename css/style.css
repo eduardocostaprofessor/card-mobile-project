@@ -20,7 +20,7 @@
 
 body {
     font-family: "Roboto-Regular";
-    background-color: #D9DFE7;
+    background-color: #e7eaee;
     font-size: 12px;
 }
 
@@ -185,7 +185,9 @@ header i {
 
 /***************** FOOTER  *****************/
 /* Aplicando padrão BEM CSS - getbem.com*/
-
+/* .footer-box {
+    opacity: 0;
+} */
 .menubottom{
     position: fixed;
     bottom: 0;
@@ -222,7 +224,7 @@ header i {
     }
 
     .page-title{
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .search-box {
@@ -230,7 +232,7 @@ header i {
     }
 
     .search-box i {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
     
     
@@ -239,57 +241,151 @@ header i {
         margin-bottom: 155px;
     }
     .card-box {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        border-radius: 10px; 
+        margin-bottom: 35px;  
     }
     .card-title {
         width: 100%;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         margin-bottom: 30px;
     }
     .card {
-        width: 48%;
-        padding: 8px;
-        margin-bottom: 20px;
+        /* width: 48%; */
+        padding: 20px 8px;
+        margin-bottom: 30px;
 
         border-radius: 8px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+        /* box-shadow: 0px 0px 10px rgba(0, 0, 0, .1); */
     }
     
     .card-perfil {
-        width: 75px;
-        height: 75px;
+        width: 85px;
+        height: 85px;
     }
 
     .card-name{
         margin-top: 0;
         margin-left: 10px;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
     
     .card-status{
-        font-size: 1rem;
+        font-size: 1.2rem;
         margin-left: 10px;
     }
     
     .card-price{
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     /* FOOTER */
 
     .menubottom {
-        padding: 20px 10%;
+        padding: 20px 5%;
         min-height: 100px;
         border-radius: 0;
     }
     .menubottom__item {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 920px) {
+    .page-header {
+        height: 100px;
+    }
+    .page-title{
+        font-size: 1.5rem;
+    }
+    
+    .search-box {
+        width: 50px;
+    }
+    
+    .search-box i {
+        font-size: 1.2rem !important;
+    }
+
+    /* MAIN */
+    .page-content {
+        margin-bottom: 0px;
+    }
+    .card-title {
+        font-size: .8rem;
+    }
+    .card-box {
+        position: static;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+        max-width: 920px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .card {
+        flex-direction: column;
+        align-items: center;
+        
+        width: 150px;
+        cursor: pointer;
+        border: none;
+        padding: 15px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+        transition: box-shadow .3s;
+    }
+    
+    .card:hover {
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, .3);
+    }
+    
+    .card-counter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        
+        width: 20px;
+        height: 20px;
+        font-size: .6rem;
+        border-radius: 5px;
+    }
+
+    
+    .card-perfil {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .card-name {
+        margin-left: 0;
+        width: 100%;
+        font-size: .8rem;
+        margin-bottom: 10px;
+    }
+    .card-info {
+        margin-top: 20px;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .card-status {
+        font-size: .6rem;
+        margin-left: 0;
+    }
+    
+    .card-price {
+        margin-top: 20px;
+        font-size: .8rem;
+    }
+
+
+    /* rodapé */
     .menubottom {
         left: auto;
         top: 50%;
@@ -306,16 +402,34 @@ header i {
         align-items: center;
     
         
-        background-color: transparent;
+        background-color: white;
         border-radius: 15px;
-        border: 1px solid #00A5DD;
+        /* border: 1px solid #00A5DD; */
         box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
     }
     .menubottom__item {
-        color : white;
+        font-size: 1rem;
+        color : #b0b2b5;
         transition: color 0.3s;
     }
     .menubottom__item:hover {
         color: #008bba !important;
     }
+
+    /* FOOTER */
+    .footer-box {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        width: 100%;
+        background-image: linear-gradient(120deg, #00A5DD,#46BEE6, #48BCE5, #6accef);
+    }
+
+    .footer-allright {
+        width: 80%;
+        font-size: .9rem;
+        color: white;
+        text-align: center;
+    }
+
 }
